@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kojira.WebApi", "src\kojira.WebApi\kojira.WebApi.csproj", "{37E32E6C-66B0-4ACA-9B37-A3210DA07963}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D213081-E3D3-4F28-85B8-94132ABD7FDA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.Props = Directory.Build.Props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{082DE843-2326-4754-ADFA-DC15FED2D4D6}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "kojira.client", "src\kojira.client\kojira.client.esproj", "{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37E32E6C-66B0-4ACA-9B37-A3210DA07963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E32E6C-66B0-4ACA-9B37-A3210DA07963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E32E6C-66B0-4ACA-9B37-A3210DA07963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E32E6C-66B0-4ACA-9B37-A3210DA07963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{082DE843-2326-4754-ADFA-DC15FED2D4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{082DE843-2326-4754-ADFA-DC15FED2D4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{082DE843-2326-4754-ADFA-DC15FED2D4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{082DE843-2326-4754-ADFA-DC15FED2D4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EE19F8-C974-410B-9FD1-C8C2F4AC238B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

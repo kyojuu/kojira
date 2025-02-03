@@ -1,0 +1,22 @@
+services:
+  kojira.webapi:
+    image: ${DOCKER_REGISTRY-}kojirawebapi
+    build:
+      context: .
+      dockerfile: src/kojira.WebApi/Dockerfile
+    ports:
+        - "5000:5000"
+        - "5001:5001"
+  sql-server:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    environment:
+        - ACCEPT_EULA=Y
+        - MSSQL_SA_PASSWORD=Legoworld9$
+        - MSSQL_PID=Express
+    volumes:
+        - sql-server-data:/var/opt/mssql
+        - sql-server-log:/var/opt/mssql/log
+        - sql-server-backup:/var/opt/mssql/backup
+        - ./src/kojira.Infrastructure/Database/Scripts:/scripts
+    
+

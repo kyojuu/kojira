@@ -36,20 +36,20 @@ public class AccountController : ControllerBase
             return BadRequest();
         }
 
-        // Sign In
-        var signInResult = await _signInManager.PasswordSignInAsync(model.
-            Email, model.Password, false, true);
-        if (signInResult.Succeeded)
-        {
-            return Ok("Login successful.");
-        }
-
         // Get User
         var user = await _userManager.FindByEmailAsync(model.Email);
         if (user == null)
         {
             return BadRequest();
         }
+
+        // Sign In
+        var signInResult = await _signInManager.PasswordSignInAsync(user, model.Password, true, false);
+        if (signInResult.Succeeded)
+        {
+            return Ok("Login successful.");
+        }
+
         //_logger.LogInformation(1 ,"User logged in.");
         return Unauthorized("Invalid login attempt.");
     }
@@ -64,7 +64,7 @@ public class AccountController : ControllerBase
         }
 
         // Add User
-        var user = new ApplicationUser { UserName = model.Email, Email = model.Email, };
+        var user = new ApplicationUser { UserName = model.Name, Email = model.Email, };
         var identityResult = await _userManager.CreateAsync(user, model.Password);
         if (!identityResult.Succeeded)
         {
